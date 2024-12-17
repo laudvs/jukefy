@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Trilha Sonora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jukefy</h1>
+    </header>
+    <main>
+        <section class="input-section">
+            <textarea id="user-text" placeholder="Escreva aqui sua história, sentimento ou ideia..."></textarea>
+            <button id="generate-btn">Gerar Trilha Sonora</button>
+            <div id="loading" class="hidden">Gerando sua playlist...</div>
+        </section>
+        <section id="playlist-section" class="hidden">
+            <h2>Playlist Gerada:</h2>
+            <ul id="playlist"></ul>
+            <button id="reset-btn">Reiniciar</button>
+            <button id="share-btn">Compartilhar Playlist</button>
+        </section>
+        <section id="history-section" class="hidden">
+            <h2>Histórico de Playlists:</h2>
+            <ul id="history"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gerador de Trilha Sonora</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Reseta estilos padrão */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-section, #playlist-section, #history-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+textarea:focus {
+    outline: 2px solid #3498db;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Efeito de fade-in */
+#playlist-section, #history-section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#playlist-section.hidden, #history-section.hidden {
+    opacity: 0;
+}
+
+#playlist-section:not(.hidden), #history-section:not(.hidden) {
+    opacity: 1;
+}
+
+/* Loading */
+#loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #fff;
+}
